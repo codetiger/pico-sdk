@@ -16,9 +16,9 @@
 #define GAMETIGER_RP2040
 
 // On some samples, the xosc can take longer to stabilize than is usual
-#ifndef PICO_XOSC_STARTUP_DELAY_MULTIPLIER
-#define PICO_XOSC_STARTUP_DELAY_MULTIPLIER 64
-#endif
+// #ifndef PICO_XOSC_STARTUP_DELAY_MULTIPLIER
+// #define PICO_XOSC_STARTUP_DELAY_MULTIPLIER 64
+// #endif
 
 //------------- UART -------------//
 #ifndef PICO_DEFAULT_UART
@@ -74,11 +74,10 @@
 
 //------------- FLASH -------------//
 
-// Use slower generic flash access
 #define PICO_BOOT_STAGE2_CHOOSE_W25Q080 1
 
 #ifndef PICO_FLASH_SPI_CLKDIV
-#define PICO_FLASH_SPI_CLKDIV 2
+#define PICO_FLASH_SPI_CLKDIV 4
 #endif
 
 #ifndef PICO_FLASH_SIZE_BYTES
